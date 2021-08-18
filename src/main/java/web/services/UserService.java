@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface UserService {
     void add(User user);
-    List<User> listUsers();
-    //User getUserByModelAndSeries(String model, int series);
+    List<User> getAllUsers();
+    User getUserById(long id);
+    public void updateUser(long id, User user);
+    public void deleteUser(long id);
 }

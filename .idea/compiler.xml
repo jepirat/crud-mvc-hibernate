@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="2.2.2. spring_mvc" />
+        <module name="work-crud" />
         <module name="spring-mvc" />
       </profile>
     </annotationProcessing>

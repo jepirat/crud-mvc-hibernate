@@ -15,32 +15,27 @@ public class UserDAOImpl implements UserDAO {
     public UserDAOImpl() {
     }
 
-    @Transactional
     @Override
     public List<User> getAllUsers() {
         return entityManager.createQuery("FROM User").getResultList();
     }
 
-    @Transactional
     @Override
     public void saveUser(User user) {
         entityManager.persist(user);
     }
 
-    @Transactional
     @Override
     public User getUserById(long id) {
         return entityManager.find(User.class, id);
     }
 
-    @Transactional
     @Override
     public void updateUser(long id, User user) {
         user.setId(id);
         entityManager.merge(user);
     }
 
-    @Transactional
     @Override
     public void deleteUser(long id) {
         entityManager.remove(getUserById(id));
